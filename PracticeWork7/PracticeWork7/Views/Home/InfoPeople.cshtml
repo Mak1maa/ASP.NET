@@ -1,0 +1,42 @@
+﻿ @{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>InfoPeople</title>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <td> Имя </td>
+                <td> Эл. Почта </td>
+                <td> Телефон </td>
+                <td> Присутствие на вечеринке </td>
+            </tr>
+            @foreach (PracticeWork7.Models.GuestResponse f in ViewBag.Item)
+            {
+                <tr>
+                    <td> @f.Name </td>
+                    <td> @f.Email </td>
+                    <td> @f.Phone </td>
+                    <td>
+                        @if (@f.WillAttend == true)
+                        {
+                            @:Будет присутствовать.
+                        }
+                        else
+                        {
+                            @:Не будет присутствовать.
+                        }
+                    </td>
+                </tr>
+             }
+        </table>
+    </div>
+</body>
+</html>

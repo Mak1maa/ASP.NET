@@ -1,0 +1,38 @@
+﻿@{
+    Layout = null; // Разор - движок представления. Движок обеспечивающий интерактивность представлений.
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+    <style>
+        .btn a{
+            color: white;
+            text-decoration: none;
+        }
+
+        body{
+            background-color: #F1F1F1;
+        }
+
+        h2{
+            margin-top: 16.5%;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-center">
+        <!--@ViewBag.Greeting - из представления-->
+        <h2> Привет, в канун нового года я организую вечеринку. <br /> И ты в списке приглашённых. <br /> Заполни анкету. </h2>
+        <div class="btn btn-success">
+            @Html.ActionLink("Заполнить анкету", "RsvpForm")
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+﻿@model PracticeWork7.Models.GuestResponse
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Thanks</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+    <style>
+        body{
+            background: #f1f1f1;
+        }
+
+        h1{
+            margin-top: 20.5%;
+        }
+    </style>
+</head>
+<body>
+    <div class = "text-center"> 
+        <h1> Спасибо, @Model.Name! </h1>
+        <div class = "lead">
+            @if (Model.WillAttend == true)
+            {
+                @: Это здорово, что ты будешь на вечеринке. Мы тебя ждём!
+            }
+            else
+            {
+                @: Печально, что тебя не будет...
+            }
+        </div>
+    </div>
+</body>
+</html>
